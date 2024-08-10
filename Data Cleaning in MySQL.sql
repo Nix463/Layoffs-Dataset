@@ -6,7 +6,7 @@ FROM layoffs;
 -- 1. Remove Duplicates
 -- 2. Standardize the Data
 -- 3. Null Values or blank values
--- 4. Remove Any Columns
+-- 4. Remove Any Columns or Rows
 
 
 CREATE TABLE layoffs_staging
@@ -159,6 +159,7 @@ FROM layoffs_staging2
 WHERE total_laid_off IS NULL
 AND percentage_laid_off IS NULL;
 
+-- 4. Remove Any Columns or Rows
 
 DELETE
 FROM layoffs_staging2
